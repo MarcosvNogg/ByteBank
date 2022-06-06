@@ -1,0 +1,21 @@
+<section>
+    <div class="areaTitulo">
+        <h2 class="titulo">
+            Transferência
+        </h2>
+    </div>
+    <table class="tabela">
+        <thead class="cabecalho">
+            <th class="conteudo">Data</th>
+            <th class="conteudo">Valor</th>
+            <th class="conteudo">Destino</th>
+        </thead>
+        <tbody>
+            <tr class="linha" *ngFor="let transferencia of transferencias">
+                <td class="conteudo">{{ transferencia.data | date: 'short' }}</td>
+                <td class="conteudo">{{ transferencia.valor | currency }}</td>
+                <td class="conteudo">{{ transferencia.destino }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
